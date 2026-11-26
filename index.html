@@ -216,7 +216,6 @@
 
     <div class="cards">
 
-        <!-- Farol do Cabo Branco -->
         <article class="card">
 
             <img src="assets/images/farol.jpg"
@@ -234,7 +233,6 @@
 
         </article>
 
-        <!-- Centro Histórico -->
         <article class="card">
 
             <img src="assets/images/centro-historico.jpg"
@@ -252,7 +250,6 @@
 
         </article>
 
-        <!-- Parque Solon de Lucena -->
         <article class="card">
 
             <img src="assets/images/lagoa.jpg"
@@ -270,7 +267,6 @@
 
         </article>
 
-        <!-- Estação Cabo Branco -->
         <article class="card">
 
             <img src="assets/images/estacao-cabo-branco.jpg"
@@ -293,17 +289,165 @@
 </section>
 
 
-        <!-- Gastronomia -->
-        <section id="gastronomia">
-            <h2>Gastronomia</h2>
-            <p>Descubra os sabores da culinária paraibana.</p>
-        </section>
+        
+<section id="gastronomia" class="gastronomia">
 
-        <!-- Contato -->
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco.</p>
-        </section>
+    <h2>Sabores da Paraíba</h2>
+
+    <p>
+        Conheça os sabores, aromas e tradições
+        que fazem parte da identidade gastronômica
+        paraibana.
+    </p>
+
+    <div class="cards">
+
+        <article class="card">
+
+            <img src="assets/images/rubacao.jpg"
+                 alt="Prato tradicional de rubacão"
+                 width="300"
+                 loading="lazy">
+
+            <h3>Rubacão</h3>
+
+            <p>
+                Prato tradicional paraibano preparado
+                com arroz, feijão, queijo coalho
+                e outros ingredientes regionais.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <img src="assets/images/carne-de-sol.jpg"
+                 alt="Carne de sol acompanhada de macaxeira"
+                 width="300"
+                 loading="lazy">
+
+            <h3>Carne de sol com macaxeira</h3>
+
+            <p>
+                Uma combinação típica da culinária
+                nordestina, que reúne carne de sol
+                e macaxeira cozida ou frita.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <img src="assets/images/tapioca.jpg"
+                 alt="Tapioca recheada"
+                 width="300"
+                 loading="lazy">
+
+            <h3>Tapioca</h3>
+
+            <p>
+                Preparada com goma de mandioca,
+                pode receber recheios doces ou salgados
+                e é muito apreciada na região.
+            </p>
+
+        </article>
+
+        <article class="card">
+
+            <img src="assets/images/cuscuz.jpg"
+                 alt="Cuscuz nordestino"
+                 width="300"
+                 loading="lazy">
+
+            <h3>Cuscuz nordestino</h3>
+
+            <p>
+                Preparado com flocos de milho,
+                é um alimento tradicional que pode
+                ser acompanhado de manteiga, queijo,
+                ovos ou carne de sol.
+            </p>
+
+        </article>
+
+    </div>
+
+</section>
+
+
+        
+<section id="contato" class="contato">
+
+    <h2>Fale conosco</h2>
+
+    <p>
+        Tem alguma dúvida, sugestão ou conhece
+        algum destino que merece estar em nosso guia?
+        Entre em contato conosco!
+    </p>
+
+    <form id="form-contato">
+
+
+        <div class="campo">
+            <label for="nome">Nome completo</label>
+
+            <input type="text"
+                   id="nome"
+                   name="nome"
+                   placeholder="Digite seu nome"
+                   required>
+        </div>
+
+
+        <div class="campo">
+            <label for="email">E-mail</label>
+
+            <input type="email"
+                   id="email"
+                   name="email"
+                   placeholder="Digite seu e-mail"
+                   required>
+        </div>
+
+
+        <div class="campo">
+            <label for="assunto">Assunto</label>
+
+            <select id="assunto"
+                    name="assunto"
+                    required>
+
+                <option value="">Selecione um assunto</option>
+                <option value="duvida">Dúvida</option>
+                <option value="sugestao">Sugestão</option>
+                <option value="elogio">Elogio</option>
+                <option value="outros">Outros</option>
+
+            </select>
+        </div>
+
+
+        <div class="campo">
+            <label for="mensagem">Mensagem</label>
+
+            <textarea id="mensagem"
+                      name="mensagem"
+                      rows="5"
+                      placeholder="Escreva sua mensagem"
+                      required></textarea>
+        </div>
+
+    
+        <button type="submit" class="btn">
+            Enviar mensagem
+        </button>
+
+    </form>
+
+</section>
+
 
     </main>
 
