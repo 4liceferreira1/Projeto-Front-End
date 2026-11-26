@@ -1,0 +1,25 @@
+
+# =====================================
+# DESCUBRA JP - GITIGNORE
+# =====================================
+
+# Arquivos do sistema operacional
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Configuracoes locais de editores
+.vscode/
+.idea/
+
+# Arquivos temporarios
+*.tmp
+*.log
+*.bak
+
+# Dependencias
+node_modules/
+
+# Variaveis de ambiente
+.env
+.env.local
