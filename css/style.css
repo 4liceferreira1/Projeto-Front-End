@@ -1,8 +1,12 @@
+/* =====================================
+   IMPORTAÇÃO DE FONTES
+===================================== */
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600;700&display=swap');
 
-
-/* Variáveis de cores e fontes */
+/* =====================================
+   VARIÁVEIS GLOBAIS
+===================================== */
 
 :root {
     --cor-primaria: #124E59;
@@ -17,7 +21,9 @@
 }
 
 
-/* Reset CSS */
+/* =====================================
+   RESET CSS E ESTILOS GLOBAIS
+===================================== */
 
 * {
     margin: 0;
@@ -26,7 +32,6 @@
 }
 
 
-/* Configurações gerais */
 
 html {
     scroll-behavior: smooth;
@@ -40,7 +45,6 @@ body {
 }
 
 
-/* Configuração dos títulos */
 
 h1, h2, h3 {
     font-family: var(--fonte-titulo);
@@ -62,14 +66,12 @@ h3 {
 }
 
 
-/* Configuração dos parágrafos */
 
 p {
     margin-bottom: 15px;
 }
 
 
-/* Configuração dos links */
 
 a {
     text-decoration: none;
@@ -77,14 +79,12 @@ a {
 }
 
 
-/* Configuração das listas */
 
 ul {
     list-style: none;
 }
 
 
-/* Configuração das imagens */
 
 img {
     display: block;
@@ -93,14 +93,12 @@ img {
 }
 
 
-/* Espaçamento das seções */
 
 section {
     padding: 60px 8%;
 }
 
 
-/* Configuração dos formulários */
 
 input, select, textarea, button {
     font-family: var(--fonte-texto);
@@ -110,8 +108,6 @@ input, select, textarea, button {
 button {
     cursor: pointer;
 }
-
-
 
 /* =====================================
    CABEÇALHO E MENU DE NAVEGAÇÃO
@@ -133,7 +129,6 @@ header {
 }
 
 
-/* Logotipo */
 
 .logo a {
     font-family: var(--fonte-titulo);
@@ -143,7 +138,6 @@ header {
 }
 
 
-/* Menu de navegação */
 
 nav ul {
     display: flex;
@@ -152,7 +146,6 @@ nav ul {
 }
 
 
-/* Links do menu */
 
 nav ul li a {
     color: var(--cor-branca);
@@ -163,15 +156,998 @@ nav ul li a {
 }
 
 
-/* Efeito ao passar o mouse */
 
 nav ul li a:hover {
     color: var(--cor-destaque);
 }
 
 
-/* Espaçamento da navegação interna */
 
 section {
     scroll-margin-top: 100px;
+}
+
+
+
+
+.hero {
+    min-height: 85vh;
+
+    background-image:
+        linear-gradient(
+            rgba(0, 0, 0, 0.55),
+            rgba(0, 0, 0, 0.55)
+        ),
+        url('../assets/images/banner.jpg');
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: var(--cor-branca);
+}
+
+
+
+.hero-content {
+    max-width: 850px;
+}
+
+
+
+.hero-content span {
+    display: inline-block;
+
+    color: var(--cor-destaque);
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+
+
+.hero h1 {
+    color: var(--cor-branca);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+
+    margin-bottom: 25px;
+}
+
+
+
+.hero p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+
+    max-width: 700px;
+    margin: 0 auto 30px;
+}
+
+
+
+.btn {
+    display: inline-block;
+
+    background-color: var(--cor-destaque);
+    color: var(--cor-primaria);
+
+    padding: 15px 30px;
+    border: none;
+    border-radius: 6px;
+
+    font-weight: 600;
+
+    transition: background-color 0.3s ease,
+                color 0.3s ease,
+                transform 0.3s ease;
+}
+
+
+
+.btn:hover {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   SEÇÃO SOBRE JOÃO PESSOA
+===================================== */
+
+.sobre {
+    background-color: var(--cor-fundo);
+}
+
+
+
+.sobre h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+
+
+.sobre-conteudo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    align-items: center;
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.sobre-texto p {
+    font-size: 1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+
+
+.sobre-imagem img {
+    width: 100%;
+    height: 350px;
+
+    object-fit: cover;
+    border-radius: 12px;
+
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.curiosidades {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+
+    max-width: 1200px;
+    margin: 50px auto 0;
+}
+
+
+
+.curiosidades article {
+    background-color: var(--cor-branca);
+
+    padding: 30px 20px;
+    border-radius: 10px;
+    border-bottom: 4px solid var(--cor-secundaria);
+
+    text-align: center;
+
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+
+.curiosidades h3 {
+    color: var(--cor-primaria);
+    font-size: 1.8rem;
+    font-weight: 700;
+
+    margin-bottom: 10px;
+}
+
+
+
+.curiosidades p {
+    font-size: 0.9rem;
+    margin-bottom: 0;
+}
+
+
+
+.curiosidades article:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+
+/* =====================================
+   PRAIAS, PONTOS TURÍSTICOS E GASTRONOMIA
+===================================== */
+
+.praias {
+    background-color: var(--cor-branca);
+}
+
+.turismo {
+    background-color: var(--cor-fundo);
+}
+
+.gastronomia {
+    background-color: var(--cor-branca);
+}
+
+
+
+.praias h2,
+.turismo h2,
+.gastronomia h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+
+.praias > p,
+.turismo > p,
+.gastronomia > p {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto 40px;
+}
+
+
+
+.cards {
+    display: grid;
+
+    grid-template-columns:
+        repeat(auto-fit, minmax(240px, 1fr));
+
+    gap: 25px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.card {
+    background-color: var(--cor-branca);
+
+    border-radius: 12px;
+    overflow: hidden;
+
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.10);
+
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+
+.card img {
+    width: 100%;
+    height: 220px;
+
+    object-fit: cover;
+}
+
+
+
+.card h3 {
+    color: var(--cor-primaria);
+
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    padding: 20px 20px 10px;
+}
+
+
+
+.card p {
+    color: var(--cor-texto);
+
+    font-size: 0.9rem;
+    line-height: 1.7;
+
+    padding: 0 20px 25px;
+    margin-bottom: 0;
+}
+
+
+
+.card:hover {
+    transform: translateY(-8px);
+
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.18);
+}
+
+
+/* =====================================
+   SEÇÃO E FORMULÁRIO DE CONTATO
+===================================== */
+
+.contato {
+    background-color: var(--cor-fundo);
+}
+
+
+
+.contato h2 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+
+
+.contato > p {
+    text-align: center;
+
+    max-width: 700px;
+    margin: 0 auto 40px;
+}
+
+
+
+#form-contato {
+    background-color: var(--cor-branca);
+
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 40px;
+
+    border-radius: 12px;
+
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.10);
+}
+
+
+
+.campo {
+    display: flex;
+    flex-direction: column;
+
+    gap: 8px;
+    margin-bottom: 25px;
+}
+
+
+
+.campo label {
+    color: var(--cor-primaria);
+
+    font-size: 0.95rem;
+    font-weight: 600;
+}
+
+
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+
+    padding: 14px;
+
+    border: 1px solid #CCCCCC;
+    border-radius: 6px;
+
+    background-color: var(--cor-branca);
+    color: var(--cor-texto);
+
+    font-size: 0.95rem;
+
+    transition: border-color 0.3s ease,
+                box-shadow 0.3s ease;
+}
+
+
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    outline: 2px solid var(--cor-secundaria);
+    outline-offset: 2px;
+
+    border-color: var(--cor-secundaria);
+
+    box-shadow: 0 0 8px rgba(42, 157, 143, 0.20);
+}
+
+
+
+.campo input::placeholder,
+.campo textarea::placeholder {
+    color: #757575;
+}
+
+
+
+.campo textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+
+
+.campo select {
+    cursor: pointer;
+}
+
+
+
+#form-contato .btn {
+    width: 100%;
+
+    padding: 15px;
+
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+
+/* =====================================
+   RODAPÉ
+===================================== */
+
+.rodape {
+    background-color: var(--cor-primaria);
+    color: var(--cor-branca);
+
+    padding: 60px 8% 25px;
+}
+
+
+
+.rodape-conteudo {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+
+    gap: 40px;
+
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+.rodape h3 {
+    color: var(--cor-destaque);
+
+    font-size: 1.2rem;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+}
+
+
+
+.rodape p {
+    color: #E0E8E9;
+
+    font-size: 0.9rem;
+    line-height: 1.8;
+
+    margin-bottom: 10px;
+}
+
+
+
+.rodape-links ul {
+    display: flex;
+    flex-direction: column;
+
+    gap: 10px;
+}
+
+.rodape-links a {
+    color: var(--cor-branca);
+
+    font-size: 0.9rem;
+
+    transition: color 0.3s ease;
+}
+
+.rodape-links a:hover {
+    color: var(--cor-destaque);
+}
+
+
+
+.rodape-final {
+    max-width: 1200px;
+
+    margin: 40px auto 0;
+    padding-top: 25px;
+
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
+    text-align: center;
+}
+
+
+
+.rodape-final p {
+    font-size: 0.85rem;
+    margin-bottom: 5px;
+}
+
+
+
+.rodape-final a {
+    display: inline-block;
+
+    color: var(--cor-destaque);
+
+    font-size: 0.9rem;
+    font-weight: 600;
+
+    margin-top: 15px;
+
+    transition: transform 0.3s ease,
+                color 0.3s ease;
+}
+
+.rodape-final a:hover {
+    color: var(--cor-branca);
+
+    transform: translateY(-3px);
+}
+
+
+/* =====================================
+   RESPONSIVIDADE - MEDIA QUERIES
+===================================== */
+
+/* Tablets e notebooks menores */
+
+@media (max-width: 1024px) {
+
+    header {
+        padding: 20px 5%;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    section {
+        padding: 50px 5%;
+    }
+
+    .sobre-conteudo {
+        gap: 25px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .rodape-conteudo {
+        gap: 25px;
+    }
+
+}
+
+
+/* Tablets menores e smartphones */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        gap: 15px;
+        position: static;
+    }
+
+    .logo a {
+        font-size: 1.5rem;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 12px;
+    }
+
+    nav ul li a {
+        font-size: 0.85rem;
+    }
+
+    section {
+        padding: 45px 5%;
+        scroll-margin-top: 0;
+    }
+
+    h2 {
+        font-size: 1.7rem;
+    }
+
+    .hero {
+        min-height: 70vh;
+    }
+
+    .hero h1 {
+        font-size: 2.3rem;
+    }
+
+    .hero p {
+        font-size: 1rem;
+    }
+
+    .hero-content span {
+        font-size: 0.75rem;
+        letter-spacing: 2px;
+    }
+
+    .sobre-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .sobre-imagem img {
+        height: 280px;
+    }
+
+    .curiosidades {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .cards {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
+    .card img {
+        height: 190px;
+    }
+
+    #form-contato {
+        padding: 25px;
+    }
+
+    .rodape-conteudo {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 30px;
+    }
+
+    .rodape {
+        padding: 40px 5% 20px;
+    }
+
+}
+
+
+/* Smartphones com telas pequenas */
+
+@media (max-width: 480px) {
+
+    .hero h1 {
+        font-size: 1.9rem;
+    }
+
+    .hero p {
+        font-size: 0.9rem;
+    }
+
+    .hero-content span {
+        letter-spacing: 1px;
+    }
+
+    .btn {
+        padding: 12px 22px;
+        font-size: 0.9rem;
+    }
+
+    h2 {
+        font-size: 1.5rem;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .sobre-imagem img {
+        height: 230px;
+    }
+
+    .curiosidades h3 {
+        font-size: 1.5rem;
+    }
+
+    #form-contato {
+        padding: 20px;
+    }
+
+    .campo input,
+    .campo select,
+    .campo textarea {
+        font-size: 1rem;
+    }
+
+    .rodape h3 {
+        font-size: 1.1rem;
+    }
+
+}
+
+
+/* =====================================
+   ACESSIBILIDADE - REDUÇÃO DE MOVIMENTOS
+===================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        transition: none;
+        animation: none;
+    }
+
+    .card:hover,
+    .curiosidades article:hover,
+    .btn:hover,
+    .rodape-final a:hover {
+        transform: none;
+    }
+
+}
+
+
+
+/* =====================================
+   MENU HAMBÚRGUER
+===================================== */
+
+
+/* Botão do menu */
+
+.menu-toggle {
+    display: none;
+
+    background: transparent;
+    border: none;
+
+    padding: 8px;
+
+    cursor: pointer;
+}
+
+
+/* Linhas do ícone */
+
+.menu-toggle span {
+    display: block;
+
+    width: 28px;
+    height: 3px;
+
+    margin: 5px 0;
+
+    background-color: var(--cor-branca);
+
+    border-radius: 3px;
+
+    transition: transform 0.3s ease,
+                opacity 0.3s ease;
+}
+
+
+/* Indicador de foco */
+
+.menu-toggle:focus-visible {
+    outline: 2px solid var(--cor-destaque);
+    outline-offset: 4px;
+}
+
+
+/* Transformação do ícone em X */
+
+.menu-toggle.ativo span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.menu-toggle.ativo span:nth-child(2) {
+    opacity: 0;
+}
+
+.menu-toggle.ativo span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+
+/* Menu para dispositivos móveis */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: row;
+        flex-wrap: wrap;
+
+        justify-content: space-between;
+        align-items: center;
+
+        position: static;
+    }
+
+    .js .menu-toggle {
+        display: block;
+    }
+
+    #menu-navegacao {
+        width: 100%;
+    }
+
+    .js #menu-navegacao {
+        display: none;
+    }
+
+    .js #menu-navegacao.ativo {
+        display: block;
+    }
+
+    #menu-navegacao ul {
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 0;
+
+        padding-top: 10px;
+    }
+
+    #menu-navegacao li {
+        width: 100%;
+
+        border-bottom:
+            1px solid rgba(255, 255, 255, 0.15);
+    }
+
+    #menu-navegacao li:last-child {
+        border-bottom: none;
+    }
+
+    #menu-navegacao a {
+        display: block;
+
+        padding: 14px 10px;
+
+        font-size: 0.95rem;
+    }
+
+    #menu-navegacao a:hover {
+        background-color:
+            rgba(255, 255, 255, 0.08);
+    }
+
+}
+
+
+
+/* =====================================
+   FEEDBACK DO FORMULÁRIO
+===================================== */
+
+
+/* Área de retorno */
+
+.feedback {
+    border-radius: 6px;
+
+    font-size: 0.9rem;
+    font-weight: 500;
+
+    text-align: center;
+}
+
+
+/* Mensagem de sucesso */
+
+.feedback.sucesso {
+    background-color: #E6F4EA;
+    color: #1B5E20;
+
+    border: 1px solid #81C784;
+
+    padding: 15px;
+    margin-top: 20px;
+}
+
+
+/* Mensagem de erro */
+
+.feedback.erro {
+    background-color: #FDECEC;
+    color: #B71C1C;
+
+    border: 1px solid #EF9A9A;
+
+    padding: 15px;
+    margin-top: 20px;
+}
+
+
+/* Aviso de formulário demonstrativo */
+
+.aviso-formulario {
+    color: #666666;
+
+    font-size: 0.8rem;
+    text-align: center;
+
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+
+
+/* Botão desativado */
+
+#btn-enviar:disabled {
+    background-color: #CCCCCC;
+    color: #555555;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+
+/* RECURSOS MULTIMÍDIA */
+
+.multimidia {
+    background-color: var(--cor-fundo);
+    text-align: center;
+}
+
+.multimidia p {
+    max-width: 800px;
+    margin: 0 auto 30px;
+}
+
+.video-conteudo {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.video-conteudo video {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    background-color: #000000;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+}
+
+
+
+.icone-curiosidade {
+    width: 45px;
+    height: 45px;
+
+    fill: none;
+
+    stroke: var(--cor-secundaria);
+    stroke-width: 1.8;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+
+    display: block;
+    margin: 0 auto 15px;
 }
