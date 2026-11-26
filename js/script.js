@@ -5,13 +5,14 @@
 
 "use strict";
 
-
 document.addEventListener("DOMContentLoaded", function () {
 
     console.log("Descubra JP iniciado com sucesso!");
 
 
-    /* Seleção dos elementos do HTML */
+    /* =====================================
+       SELEÇÃO DOS ELEMENTOS DO HTML
+    ===================================== */
 
     const cabecalho = document.querySelector("header");
 
@@ -33,8 +34,16 @@ document.addEventListener("DOMContentLoaded", function () {
     const cards =
         document.querySelectorAll(".card");
 
+    const feedback =
+        document.getElementById("feedback-formulario");
 
-    /* Verificação dos elementos */
+    const botaoEnviar =
+        document.getElementById("btn-enviar");
+
+
+    /* =====================================
+       VERIFICAÇÃO DOS ELEMENTOS
+    ===================================== */
 
     console.log("Cabeçalho:", cabecalho);
 
@@ -54,7 +63,6 @@ document.addEventListener("DOMContentLoaded", function () {
     ===================================== */
 
     if (botaoMenu && menuNavegacao) {
-
 
         /* Função para fechar o menu */
 
@@ -107,35 +115,41 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* Fechar ao selecionar um link */
+        /* Delegação de eventos no menu */
 
-        linksMenu.forEach(function (link) {
+        menuNavegacao.addEventListener(
+            "click", function (evento) {
 
-            link.addEventListener("click", function () {
+                const link = evento.target.closest("a");
 
-                fecharMenu();
+                if (link) {
 
-            });
+                    fecharMenu();
 
-        });
+                }
+
+            }
+        );
 
 
         /* Fechar ao pressionar Escape */
 
-        document.addEventListener("keydown", function (evento) {
+        document.addEventListener(
+            "keydown", function (evento) {
 
-            if (
-                evento.key === "Escape" &&
-                menuNavegacao.classList.contains("ativo")
-            ) {
+                if (
+                    evento.key === "Escape" &&
+                    menuNavegacao.classList.contains("ativo")
+                ) {
 
-                fecharMenu();
+                    fecharMenu();
 
-                botaoMenu.focus();
+                    botaoMenu.focus();
+
+                }
 
             }
-
-        });
+        );
 
 
         /* Fechar ao retornar para o desktop */
@@ -151,7 +165,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
 
-        /* Ativa o menu interativo */
+        /* Ativação do menu interativo */
 
         document.documentElement.classList.add("js");
 
@@ -162,15 +176,117 @@ document.addEventListener("DOMContentLoaded", function () {
        FORMULÁRIO DE CONTATO
     ===================================== */
 
-    if (formulario) {
+    if (formulario && feedback && botaoEnviar) {
 
-        formulario.addEventListener("submit", function (evento) {
 
-            evento.preventDefault();
+        /* Função para exibir mensagens de feedback */
 
-            console.log("Formulário demonstrativo.");
+        function exibirFeedback(mensagem, tipo) {
+
+            feedback.textContent = mensagem;
+
+            feedback.classList.remove("sucesso", "erro");
+
+            feedback.classList.add(tipo);
+
+        }
+
+
+        /* Evento de envio do formulário */
+
+        formulario.addEventListener(
+            "submit", function (evento) {
+
+                evento.preventDefault();
+
+
+                /* Captura dos dados informados */
+
+                const nome =
+                    document.getElementById("nome").value.trim();
+
+                const email =
+                    document.getElementById("email").value.trim();
+
+                const assunto =
+                    document.getElementById("assunto").value;
+
+                const mensagem =
+                    document.getElementById("mensagem").value.trim();
+
+
+                /* Validação dos campos */
+
+                if (
+                    nome === "" ||
+                    email === "" ||
+                    assunto === "" ||
+                    mensagem === ""
+                ) {
+
+                    exibirFeedback(
+                        "Preencha todos os campos corretamente.",
+                        "erro"
+                    );
+
+                    return;
+
+                }
+
+
+                /* Validação nativa do HTML */
+
+                if (!formulario.checkValidity()) {
+
+                    exibirFeedback(
+                        "Verifique os dados informados.",
+                        "erro"
+                    );
+
+                    formulario.reportValidity();
+
+                    return;
+
+                }
+
+
+                /* Mensagem de sucesso */
+
+                exibirFeedback(
+                    `Obrigada, ${nome}! Sua mensagem foi processada com sucesso na simulação. Nenhum e-mail foi enviado.`,
+                    "sucesso"
+                );
+
+
+                /* Limpeza dos campos */
+
+                formulario.reset();
+
+
+                /* Confirmação no console */
+
+                console.log(
+                    "Simulação de envio concluída com sucesso."
+                );
+
+            }
+        );
+
+
+        /* Limpeza do feedback ao editar os campos */
+
+        formulario.addEventListener("input", function () {
+
+            feedback.textContent = "";
+
+            feedback.classList.remove("sucesso", "erro");
 
         });
+
+
+        /* Habilitação do botão de envio */
+
+        botaoEnviar.disabled = false;
 
     }
 
