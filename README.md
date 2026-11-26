@@ -1,39 +1,56 @@
-# Projeto Front-End
+# Descubra JP 🌴
 
 ## Sobre o projeto
 
-Projeto acadêmico desenvolvido para a disciplina de Front-End do curso de Análise e Desenvolvimento de Sistemas.
+O Descubra JP é um guia turístico digital desenvolvido
+para apresentar as principais praias, pontos turísticos,
+aspectos históricos, culturais e gastronômicos de
+João Pessoa, capital da Paraíba.
 
-## Objetivo
+O projeto está sendo desenvolvido como atividade
+acadêmica da disciplina de Front-End do curso de
+Análise e Desenvolvimento de Sistemas.
 
-Desenvolver uma aplicação web utilizando os conceitos de estruturação, estilização e interatividade.
+## Objetivos
 
-## Tecnologias utilizadas
+- Divulgar os atrativos turísticos de João Pessoa.
+- Aplicar os conceitos de desenvolvimento Front-End.
+- Utilizar HTML semântico, CSS e JavaScript.
+- Praticar o versionamento de código com GitHub.
+- Desenvolver uma interface responsiva e acessível.
+
+## Tecnologias
 
 - HTML5
 - CSS3
 - JavaScript
-- Git
+- Visual Studio Code
 - GitHub
 
-## Funcionalidades
+## Estrutura do projeto
 
-- Estrutura semântica em HTML5
-- Interface responsiva
-- Navegação entre conteúdos
-- Interatividade com JavaScript
+- index.html: estrutura principal do site.
+- css/style.css: estilização da interface.
+- js/script.js: interatividade do site.
+- assets/images: armazenamento das imagens.
+- README.md: documentação do projeto.
 
-## Como executar
+## Etapas de desenvolvimento
 
-1. Clone ou baixe este repositório.
-2. Abra o arquivo index.html no navegador.
-
-## Autoria
-
-- Desenvolvedora: Alice Guiomar da Silva Ferreira
-- Curso: Análise e Desenvolvimento de Sistemas
-- Instituição: UNIPÊ
+- [x] Criação do repositório
+- [x] Estrutura inicial do HTML
+- [x] Cabeçalho e menu de navegação
+- [x] Apresentação de João Pessoa
+- [x] Seção de praias
+- [ ] Seção de pontos turísticos
+- [ ] Seção de gastronomia
+- [ ] Formulário de contato
+- [ ] Estilização com CSS
+- [ ] Interatividade com JavaScript
+- [ ] Testes de responsividade
+- [ ] Publicação do site
 
 ## Status do projeto
 
 Em desenvolvimento.
+
