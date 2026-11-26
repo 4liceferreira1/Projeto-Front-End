@@ -8,8 +8,8 @@ para apresentar as belezas naturais, históricas,
 culturais e gastronômicas de João Pessoa,
 capital do estado da Paraíba.
 
-O projeto está sendo desenvolvido como atividade
-acadêmica da disciplina de Front-End do curso de
+O projeto foi idealizado como atividade acadêmica
+da disciplina de Front-End do curso de
 Análise e Desenvolvimento de Sistemas.
 
 ## Objetivos
@@ -23,23 +23,60 @@ Análise e Desenvolvimento de Sistemas.
 
 ## Tecnologias e ferramentas
 
-- HTML5 — Estruturação do conteúdo.
-- CSS3 — Estilização e responsividade.
-- JavaScript — Interatividade e comportamento.
-- Visual Studio Code — Ambiente de desenvolvimento.
-- GitHub — Versionamento e armazenamento do projeto.
+| Tecnologia | Finalidade |
+| --- | --- |
+| HTML5 | Estruturação do conteúdo |
+| CSS3 | Estilização e responsividade |
+| JavaScript | Interatividade (em desenvolvimento) |
+| Visual Studio Code | Ambiente de desenvolvimento |
+| GitHub | Versionamento de código |
+| Google Fonts | Tipografia |
 
-## Funcionalidades
+## Funcionalidades implementadas
 
 - Menu de navegação interna.
-- Apresentação da cidade de João Pessoa.
-- Informações históricas e curiosidades.
+- Cabeçalho com posicionamento sticky em telas maiores.
+- Banner principal com fotografia de fundo.
+- Apresentação histórica da cidade.
+- Cards de curiosidades.
 - Galeria de praias.
-- Apresentação dos principais pontos turísticos.
+- Apresentação dos pontos turísticos.
 - Divulgação da gastronomia regional.
-- Formulário de contato com validação nativa do HTML5.
+- Formulário com validação nativa do HTML5.
 - Rodapé com informações acadêmicas.
 - Link para retornar à seção inicial.
+- Rolagem suave.
+- Efeitos de hover e transições.
+- Layout adaptável a diferentes tamanhos de tela.
+
+## Conceitos aplicados
+
+### HTML5
+
+- HTML semântico.
+- Hierarquia de títulos.
+- Links e âncoras internas.
+- Inserção de imagens.
+- Formulários.
+- Atributos de acessibilidade.
+- Validação nativa de campos.
+
+### CSS3
+
+- Variáveis CSS.
+- Reset CSS.
+- Box Model.
+- Flexbox.
+- CSS Grid.
+- Seletores de classe e ID.
+- Pseudoclasses e pseudoelementos.
+- Posicionamento de elementos.
+- Gradientes e transparência.
+- Sombras e bordas arredondadas.
+- Transições e transformações.
+- Media Queries.
+- Design responsivo.
+- Abordagem Desktop First.
 
 ## Estrutura do projeto
 
@@ -57,8 +94,10 @@ descubra-jp/
 
 ## Identidade visual
 
-A identidade visual do projeto foi inspirada
-nas paisagens naturais e litorâneas de João Pessoa.
+A identidade visual foi inspirada nas paisagens
+naturais e litorâneas de João Pessoa.
+
+### Paleta de cores
 
 | Cor | Código hexadecimal |
 | --- | --- |
@@ -67,6 +106,44 @@ nas paisagens naturais e litorâneas de João Pessoa.
 | Dourado | #E9C46A |
 | Areia | #F5F1E8 |
 | Branco | #FFFFFF |
+| Cinza-escuro | #333333 |
+
+### Tipografia
+
+- Montserrat: títulos e cabeçalhos.
+- Poppins: textos e demais elementos.
+
+## Responsividade
+
+O projeto utiliza Media Queries para adaptar
+a interface a diferentes dimensões de tela.
+
+| Breakpoint | Aplicação |
+| --- | --- |
+| 1024px | Tablets e notebooks menores |
+| 768px | Tablets menores e celulares |
+| 480px | Celulares pequenos |
+
+## Acessibilidade
+
+- Textos alternativos nas imagens.
+- Utilização de elementos semânticos.
+- Rótulos associados aos campos do formulário.
+- Indicadores visuais de foco.
+- Validação dos campos obrigatórios.
+- Respeito à preferência por redução de movimentos.
+
+## Como executar o projeto
+
+1. Baixe os arquivos do repositório.
+2. Extraia os arquivos, caso estejam compactados.
+3. Abra a pasta do projeto.
+4. Execute o arquivo index.html no navegador.
+
+Não é necessária a instalação de dependências.
+
+A conexão com a internet é necessária para
+o carregamento das fontes externas.
 
 ## Etapas de desenvolvimento
 
@@ -75,7 +152,7 @@ nas paisagens naturais e litorâneas de João Pessoa.
 - [x] Criação do repositório
 - [x] Estrutura semântica inicial
 - [x] Cabeçalho e menu de navegação
-- [x] Seção de apresentação
+- [x] Banner principal
 - [x] Sobre João Pessoa
 - [x] Seção de praias
 - [x] Seção de pontos turísticos
@@ -85,51 +162,58 @@ nas paisagens naturais e litorâneas de João Pessoa.
 
 ### CSS
 
-- [ ] Configuração das variáveis de cores
-- [ ] Configuração da tipografia
-- [ ] Estilização do cabeçalho
-- [ ] Estilização da seção inicial
-- [ ] Estilização das seções de conteúdo
-- [ ] Estilização dos cards
-- [ ] Estilização do formulário
-- [ ] Estilização do rodapé
-- [ ] Responsividade
+- [x] Configuração das variáveis de cores
+- [x] Configuração da tipografia
+- [x] Reset CSS e estilos globais
+- [x] Estilização do cabeçalho
+- [x] Estilização do banner principal
+- [x] Estilização da seção sobre a cidade
+- [x] Estilização dos cards
+- [x] Estilização do formulário
+- [x] Estilização do rodapé
+- [x] Implementação das Media Queries
 
 ### JavaScript
 
-- [ ] Implementação de interatividade
-- [ ] Menu responsivo
+- [ ] Configuração inicial
+- [ ] Manipulação do DOM
+- [ ] Menu hambúrguer
 - [ ] Tratamento do formulário
 - [ ] Simulação de envio de mensagem
 
 ### Finalização
 
-- [ ] Revisão do código
-- [ ] Verificação dos créditos das imagens
-- [ ] Testes de navegação
+- [ ] Revisão geral do código
+- [ ] Testes de funcionalidade
 - [ ] Testes de responsividade
-- [ ] Publicação do site
+- [ ] Verificação de acessibilidade
+- [ ] Verificação dos créditos das imagens
+- [ ] Publicação no GitHub Pages
+- [ ] Documentação final
 
 ## Status do projeto
 
 Em desenvolvimento.
 
-A estrutura HTML foi concluída.
-A próxima etapa consiste na implementação
-da identidade visual utilizando CSS3.
+A primeira versão da estrutura HTML e da
+estilização CSS foi concluída.
 
-O formulário de contato possui finalidade
-demonstrativa e não realiza envios reais.
+A próxima etapa consiste na implementação
+da interatividade utilizando JavaScript.
+
+O formulário possui finalidade demonstrativa
+e não realiza envios reais de mensagens.
 
 ## Informações acadêmicas
 
-Instituição: Centro Universitário de João Pessoa — UNIPÊ
+**Instituição:** Centro Universitário de João Pessoa — UNIPÊ
 
-Curso: Análise e Desenvolvimento de Sistemas
+**Curso:** Análise e Desenvolvimento de Sistemas
 
-Disciplina: Front-End
+**Disciplina:** Front-End
 
-Ano: 2026
+**Ano:** 2026
+
 
 ## Finalidade
 
